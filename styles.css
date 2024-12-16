@@ -1,0 +1,162 @@
+/* Importação de Fonte */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    background: linear-gradient(to right, #3b03e1, #e6b32a);
+    overflow-x: hidden;
+}
+
+/* Container Geral */
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Conteúdo */
+.content {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+.destaque {
+    color: #ffb400;
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+.digital {
+    color: #26d9e8;
+}
+
+/* Botão de Play */
+.play-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.play-button {
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.play-button i {
+    font-size: 1.5rem;
+}
+
+.play-button:hover {
+    background: #26d9e8;
+    border-color: #26d9e8;
+    transform: scale(1.2);
+}
+
+/* Redes Sociais */
+.social-media p {
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.icons a {
+    color: white;
+    font-size: 2rem;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.icons a:hover {
+    color: #ffb400;
+    transform: scale(1.3);
+    font-size: 2.8rem;
+}
+
+/* Slider */
+.slider {
+    width: 50%;
+    height: 90vh;
+    overflow: hidden;
+    position: relative;
+   
+}
+
+.slides {
+    display: flex;
+    
+}
+
+/* Classe para slide ativo */
+.slide.active {
+    opacity: 1;
+    z-index: 1; /* Garante que o slide ativo esteja acima */
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    display: block; /* Mantém o espaço ocupado */
+    margin-top: auto;
+    width: 88%;
+    border-radius: 30px;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content {
+        width: 100%;
+        height: 50vh;
+        text-align: center;
+        
+    }
+
+    .slider {
+        margin-left: 15%;
+        width: 100%;
+        height: 50vh;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+    .icons a {
+        font-size: 1.5rem;
+    }
+}
