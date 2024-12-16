@@ -15,6 +15,11 @@ body {
     overflow-x: hidden;
 }
 
+ /* Personalizar os estados dos links */
+ a:link, a:visited {
+    color: rgb(247, 247, 247); /* Cor padrão */
+}
+
 /* Container Geral */
 .container {
     display: flex;
@@ -74,6 +79,33 @@ h1 {
     background: #26d9e8;
     border-color: #26d9e8;
     transform: scale(1.2);
+}
+
+.player-section p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+/* Player de Rádio */
+.radio-player {
+    margin: 20px auto;
+    width: 400px;
+    height: 300px;
+    border: 3px solid #080801c0;
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: #771111;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#escuteradio {
+    margin-left: 17%;
+}
+
+.radio-player iframe {
+    width: 100%;
+    height: 100%;
 }
 
 /* Redes Sociais */
